@@ -55,7 +55,7 @@ public class Table {
     public String toString(){
         return "\nTablenumber: " + this.getTableNumber() + "\n" +
                 "Order" + order + "\n" +
-                "Total Price" + this.getReceiptAmount() + "\n" +
+                "Total Price: " + this.getReceiptAmount() + "\n" +
                 "Has customer at table: " + (this.hasCustomer());
     }
 }

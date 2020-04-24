@@ -29,7 +29,6 @@ public class Main {
         table1.doOrder(restaurant.getOrderItem("Coca Cola"));
         table1.doOrder(restaurant.getOrderItem("Coca Cola"));
 
-        System.out.println(table1.getReceiptAmount());
         System.out.println(restaurant.toString());
 
     }
