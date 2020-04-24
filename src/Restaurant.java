@@ -6,7 +6,7 @@ public class Restaurant {
     private String location;
     private String manager;
     private ArrayList<Employee> employees = new ArrayList<>();
-    private static ArrayList<OrderItem> menu = new ArrayList<>();
+    private ArrayList<OrderItem> menu = new ArrayList<>();
     private ArrayList<Table> tables = new ArrayList<>();
 
     public Restaurant(String name, String location) {
@@ -42,12 +42,12 @@ public class Restaurant {
         this.employees.add(employee);
     }
 
-    public static void addOrderItem(OrderItem orderItem){
-        Restaurant.menu.add(orderItem);
+    public void addOrderItem(OrderItem orderItem){
+        this.menu.add(orderItem);
     }
 
     public OrderItem getOrderItem(String orderItemName){
-        for (OrderItem OI : Restaurant.menu){
+        for (OrderItem OI : this.menu){
             if (OI.getName().equals(orderItemName)){
                 return OI;
             }
@@ -61,6 +61,6 @@ public class Restaurant {
                 "On location: %s" + "\n" +
                 "Staff: " + employees + "\n" +
                 "With tables" + tables + "\n" +
-                "Menu: " + Restaurant.menu ,name, location);
+                "Menu: " + this.menu ,this.getName(), this.getLocation());
     }
 }
